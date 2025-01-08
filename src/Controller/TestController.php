@@ -17,7 +17,12 @@ class TestController extends AbstractController
     }
     #[Route('/test/home', name: 'app_home')]
     public function home() : response
-    {return $this->render('test/home.html.twig') ;}
+    {
+        return $this->render('test/home.html.twig', [
+            'title' => "bienvenue",
+            'age' => 31
+        ]);
+    }
 }
 
 
